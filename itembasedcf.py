@@ -55,7 +55,6 @@ class ItemBasedCF():
 		rank={}
 		K=self.sim_movie
 		N=self.rec_movie
-		#v=similar user 
 		watched_movie=self.train[user]
 		for movie , rating in watched_movie.items():
 			for related_movie,count in sorted(self.w[movie].items(),key=itemgetter(1),reverse=True)[:K]:
